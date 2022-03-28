@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114448",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "scheme",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Scheme",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

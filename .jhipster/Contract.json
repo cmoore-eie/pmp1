@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114446",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "contract",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemStatus",
+      "fieldType": "ItemStatus",
+      "fieldValues": "DRAFT,STAGE,APPROVED"
+    },
+    {
+      "fieldName": "locked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "versionNumber",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Contract",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "contractVersion",
+      "otherEntityRelationshipName": "contract",
+      "relationshipName": "contractVersion",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

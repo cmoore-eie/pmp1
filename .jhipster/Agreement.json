@@ -1,0 +1,21 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114445",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "agreement",
+  "fields": [
+    {
+      "fieldName": "cancelReason",
+      "fieldType": "AgreementCancelReason",
+      "fieldValues": "CANCEL_BY_CARRIER"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Agreement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

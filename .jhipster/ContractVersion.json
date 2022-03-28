@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114447",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "contract_version",
+  "fields": [
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "expirationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hiddenContract",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "versionNumber",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ContractVersion",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "contract",
+      "otherEntityRelationshipName": "contractVersion",
+      "relationshipName": "contract",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

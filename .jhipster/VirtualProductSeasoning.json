@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114455",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product_seasoning",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "condition",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "defaultSeasoning",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProductSeasoning",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virtualProductFlavour",
+      "otherEntityRelationshipName": "virtualProductSeasoning",
+      "relationshipName": "virtualProductFlavour",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

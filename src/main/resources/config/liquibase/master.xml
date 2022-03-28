@@ -15,7 +15,25 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114445_added_entity_Agreement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114446_added_entity_Contract.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114447_added_entity_ContractVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114448_added_entity_Scheme.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114449_added_entity_VirtualProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114450_added_entity_VirtualProductCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114451_added_entity_VirtualProductContract.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114452_added_entity_VirtualProductFlavour.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114453_added_entity_VirtualProductLine.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114454_added_entity_VirtualProductOrganization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114455_added_entity_VirtualProductSeasoning.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20220328114447_added_entity_constraints_ContractVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114450_added_entity_constraints_VirtualProductCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114451_added_entity_constraints_VirtualProductContract.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114452_added_entity_constraints_VirtualProductFlavour.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114453_added_entity_constraints_VirtualProductLine.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114454_added_entity_constraints_VirtualProductOrganization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220328114455_added_entity_constraints_VirtualProductSeasoning.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

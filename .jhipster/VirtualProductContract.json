@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114451",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product_contract",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProductContract",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "contract",
+      "otherEntityRelationshipName": "virtualProductContract",
+      "ownerSide": true,
+      "relationshipName": "contract",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "virtualProduct",
+      "otherEntityRelationshipName": "virtualProductContract",
+      "relationshipName": "virtualProduct",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

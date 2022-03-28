@@ -1,0 +1,87 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114452",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product_flavour",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "condition",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "defaultFlavour",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "expirationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "grandfathering",
+      "fieldType": "VirtualFlavourAction",
+      "fieldValues": "GRANDFATHERSTD,GRANDFATHERASIS"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "rank",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProductFlavour",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virtualProductCategory",
+      "otherEntityRelationshipName": "virtualProductFlavour",
+      "ownerSide": true,
+      "relationshipName": "category",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "virtualProductSeasoning",
+      "otherEntityRelationshipName": "virtualProductFlavour",
+      "relationshipName": "virtualProductSeasoning",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "virtualProduct",
+      "otherEntityRelationshipName": "virtualProductFlavour",
+      "relationshipName": "virtualProduct",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}
