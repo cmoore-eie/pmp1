@@ -1,0 +1,128 @@
+
+enum AgreementCancelReason {
+    CANCEL_BY_CARRIER
+}
+
+enum ItemStatus {
+    DRAFT
+    STAGE
+    APPROVED
+}
+
+enum VirtualFlavourAction {
+    GRANDFATHERSTD
+    GRANDFATHERASIS
+}
+
+enum VirtualProductType {
+    OPEN
+    CLOSED
+    GENERAL_AGREEMENT
+}
+
+entity Agreement {
+    cancelReason AgreementCancelReason
+}
+
+entity Contract {
+    ancestorItemIdentifier String
+    code String
+    itemIdentifier String
+    itemStatus ItemStatus
+    locked Boolean
+    name String
+    productCode String
+    versionNumber Integer
+}
+
+entity ContractVersion {
+    effectiveDate LocalDate
+    expirationDate LocalDate
+    hiddenContract Boolean
+    versionNumber Integer
+}
+
+entity Scheme {
+    code String
+    name String
+}
+
+entity VirtualProduct {
+    allowAffinity Boolean
+    allowCampaign Boolean
+    code String
+    effectiveDate LocalDate
+    expirationDate LocalDate
+    locked Boolean
+    name String
+    productCode String
+    virtualProductType VirtualProductType
+}
+
+entity VirtualProductCategory {
+    ancestorItemIdentifier String
+    code String
+    itemIdentifier String
+    name String
+    priority Integer
+}
+
+entity VirtualProductContract{
+    ancestorItemIdentifier String
+    itemIdentifier String
+    priority Integer
+}
+
+entity VirtualProductFlavour {
+    ancestorItemIdentifier String
+    code String
+    condition String
+    defaultFlavour Boolean
+    effectiveDate LocalDate
+    expirationDate LocalDate
+    grandfathering VirtualFlavourAction
+    itemIdentifier String
+    lineCode String
+    name String
+    priority Integer
+    rank Integer
+}
+
+entity VirtualProductLine {
+    ancestorItemIdentifier String
+    itemIdentifier String
+    lineAvailable Boolean
+    lineCode String
+}
+
+entity VirtualProductOrganization {
+    ancestorItemIdentifier String
+    itemIdentifier String
+    organization String
+    producerCode String
+}
+
+entity VirtualProductSeasoning {
+    ancestorItemIdentifier String
+    code String
+    condition String
+    defaultSeasoning Boolean
+    itemIdentifier String
+    name String
+    priority Integer
+}
+
+relationship OneToMany {
+    Contract to ContractVersion{contract required}
+    VirtualProduct to VirtualProductFlavour{virtualProduct (name) required}
+    VirtualProduct to VirtualProductCategory{virtualProduct (name) required}
+    VirtualProduct to VirtualProductContract{virtualProduct (name) required}
+    VirtualProduct to VirtualProductLine{virtualProduct (name) required}
+    VirtualProduct to VirtualProductOrganization{virtualProduct (name) required}
+    VirtualProductFlavour to VirtualProductSeasoning{virtualProductFlavour required}
+}
+
+relationship OneToOne {
+    VirtualProductContract{contract} to Contract
+    VirtualProductFlavour{category} to VirtualProductCategory
+}
