@@ -50,6 +50,24 @@ public class CacheConfiguration {
             createCache(cm, pl.eie.pmp.domain.User.class.getName() + ".authorities");
             createCache(cm, pl.eie.pmp.domain.PersistentToken.class.getName());
             createCache(cm, pl.eie.pmp.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, pl.eie.pmp.domain.Agreement.class.getName());
+            createCache(cm, pl.eie.pmp.domain.Contract.class.getName());
+            createCache(cm, pl.eie.pmp.domain.Contract.class.getName() + ".contractVersions");
+            createCache(cm, pl.eie.pmp.domain.ContractVersion.class.getName());
+            createCache(cm, pl.eie.pmp.domain.Scheme.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName() + ".virtualProductFlavours");
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName() + ".virtualProductCategories");
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName() + ".virtualProductContracts");
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName() + ".virtualProductLines");
+            createCache(cm, pl.eie.pmp.domain.VirtualProduct.class.getName() + ".virtualProductOrganizations");
+            createCache(cm, pl.eie.pmp.domain.VirtualProductCategory.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProductContract.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProductFlavour.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProductFlavour.class.getName() + ".virtualProductSeasonings");
+            createCache(cm, pl.eie.pmp.domain.VirtualProductLine.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProductOrganization.class.getName());
+            createCache(cm, pl.eie.pmp.domain.VirtualProductSeasoning.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

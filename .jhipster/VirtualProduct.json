@@ -1,0 +1,84 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114449",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product",
+  "fields": [
+    {
+      "fieldName": "allowAffinity",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "allowCampaign",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "expirationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "locked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "virtualProductType",
+      "fieldType": "VirtualProductType",
+      "fieldValues": "OPEN,CLOSED,GENERAL_AGREEMENT"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProduct",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virtualProductFlavour",
+      "otherEntityRelationshipName": "virtualProduct",
+      "relationshipName": "virtualProductFlavour",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "virtualProductCategory",
+      "otherEntityRelationshipName": "virtualProduct",
+      "relationshipName": "virtualProductCategory",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "virtualProductContract",
+      "otherEntityRelationshipName": "virtualProduct",
+      "relationshipName": "virtualProductContract",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "virtualProductLine",
+      "otherEntityRelationshipName": "virtualProduct",
+      "relationshipName": "virtualProductLine",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "virtualProductOrganization",
+      "otherEntityRelationshipName": "virtualProduct",
+      "relationshipName": "virtualProductOrganization",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

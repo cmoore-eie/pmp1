@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114453",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product_line",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineAvailable",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lineCode",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProductLine",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "virtualProduct",
+      "otherEntityRelationshipName": "virtualProductLine",
+      "relationshipName": "virtualProduct",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}

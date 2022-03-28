@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220328114454",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virtual_product_organization",
+  "fields": [
+    {
+      "fieldName": "ancestorItemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemIdentifier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "organization",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "producerCode",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VirtualProductOrganization",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "virtualProduct",
+      "otherEntityRelationshipName": "virtualProductOrganization",
+      "relationshipName": "virtualProduct",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "no"
+}
